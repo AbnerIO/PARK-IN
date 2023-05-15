@@ -19,8 +19,15 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome)
         val btnRegistrarse = findViewById<Button>(R.id.btn_registrarse)
+        val btnLogin = findViewById<Button>(R.id.btn_login)
+
         btnRegistrarse.setOnClickListener {
             val intent = Intent(this, Register::class.java)
+            startActivity(intent)
+        }
+
+        btnLogin.setOnClickListener {
+            val intent = Intent(this, ADondeVamos::class.java)
             startActivity(intent)
         }
     }

@@ -13,9 +13,12 @@
         android:theme="@style/Theme.PARKIN"
         tools:targetApi="31">
         <activity
+            android:name=".ADondeVamos"
+            android:exported="false" />
+        <activity
             android:name=".Register"
             android:exported="false"
-            android:theme="@style/Theme.PARKIN"/>
+            android:theme="@style/Theme.PARKIN" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
