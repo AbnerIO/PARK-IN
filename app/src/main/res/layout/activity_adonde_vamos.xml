@@ -97,7 +97,7 @@
                 android:paddingLeft="10dp" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/btn_buscar"
                 android:layout_width="287dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="30dp"
