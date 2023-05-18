@@ -51,7 +51,7 @@
             <!-- Tarjeta 1 -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/CardView1"
-                android:layout_width="match_parent"
+                android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="80dp"
@@ -91,7 +91,7 @@
                     android:id="@+id/button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="230dp"
+                    android:layout_marginLeft="220dp"
                     android:layout_marginTop="10dp"
                     android:backgroundTint="#C33838"
                     android:shadowColor="#FFFFFF"
