@@ -40,6 +40,7 @@
         android:gravity="center">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/CardView"
             android:layout_width="346dp"
             android:layout_height="547dp"
             app:cardBackgroundColor="#D9D9D9"
@@ -50,6 +51,7 @@
 
             <!-- Tarjeta 1 -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/CardView1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
