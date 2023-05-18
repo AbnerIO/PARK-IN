@@ -138,7 +138,7 @@
 
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/btn_pagar"
                 android:layout_width="240dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="60dp"
@@ -151,31 +151,35 @@
                 android:id="@+id/editTextTime"
                 android:layout_width="240dp"
                 android:layout_height="50dp"
-                android:layout_marginTop="205dp"
                 android:layout_marginLeft="60dp"
-                android:ems="10"
+                android:layout_marginTop="205dp"
                 android:background="@drawable/input_background"
-                android:inputType="time" />
+                android:ems="10"
+                android:inputType="time"
+                tools:ignore="SpeakableTextPresentCheck" />
+
             <EditText
                 android:id="@+id/editTextTime1"
                 android:layout_width="240dp"
                 android:layout_height="50dp"
-                android:layout_marginTop="285dp"
                 android:layout_marginLeft="60dp"
-                android:ems="10"
+                android:layout_marginTop="285dp"
                 android:background="@drawable/input_background"
-                android:inputType="time" />
+                android:ems="10"
+                android:inputType="time"
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <EditText
                 android:id="@+id/editTextText6"
                 android:layout_width="240dp"
                 android:layout_height="100dp"
-                android:layout_marginTop="365dp"
                 android:layout_marginLeft="60dp"
-                android:ems="10"
+                android:layout_marginTop="365dp"
                 android:background="@drawable/input_background"
+                android:ems="10"
+                android:hint=""
                 android:inputType="textMultiLine"
-                android:hint="" />
+                tools:ignore="SpeakableTextPresentCheck" />
 
         </androidx.cardview.widget.CardView>
 
