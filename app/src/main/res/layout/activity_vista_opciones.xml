@@ -23,7 +23,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/btn_Profile"
         android:layout_width="60dp"
         android:layout_height="58dp"
         android:src="@drawable/usuario"
@@ -148,7 +148,7 @@
         app:layout_constraintVertical_bias="0.962" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/btn_ADondeVamos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/circuloplus"

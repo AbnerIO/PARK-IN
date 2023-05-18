@@ -13,6 +13,9 @@
         android:theme="@style/Theme.PARKIN"
         tools:targetApi="31">
         <activity
+            android:name=".MiPerfilCliente"
+            android:exported="false" />
+        <activity
             android:name=".PagoSolicitud"
             android:exported="false" />
         <activity

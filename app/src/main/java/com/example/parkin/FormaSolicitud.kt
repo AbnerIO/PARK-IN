@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.Spinner
 import androidx.activity.ComponentActivity
 
@@ -14,6 +15,18 @@ class FormaSolicitud : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_forma_solicitud)
+
+        //Botones principales
+        val btnADondeVamos = findViewById<ImageView>(R.id.btn_ADondeVamos)
+        btnADondeVamos.setOnClickListener {
+            val intent = Intent(this, ADondeVamos::class.java)
+            startActivity(intent)
+        }
+        val btnProfile= findViewById<ImageView>(R.id.btn_Profile)
+        btnProfile.setOnClickListener {
+            val intent = Intent(this, MiPerfilCliente::class.java)
+            startActivity(intent)
+        }
 
         val opcionesCarros = listOf(1, 2, 3, 4, 5)
         val opcionesBicicletas = listOf(1, 2)
