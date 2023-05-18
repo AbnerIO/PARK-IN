@@ -116,8 +116,8 @@
                 android:layout_marginTop="280dp"
                 android:layout_marginLeft="30dp"
                 android:background="@drawable/input_background"
-                android:hint="  CVV"
-                android:inputType="number"
+                android:hint="  Nombre Completo"
+                android:inputType="text"
                 android:minHeight="48dp" />
             <Button
                 android:id="@+id/btn_pagoSolicitud"

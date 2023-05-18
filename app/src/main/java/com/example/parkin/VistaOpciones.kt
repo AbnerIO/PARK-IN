@@ -25,7 +25,11 @@ class VistaOpciones : ComponentActivity() {
             val intent = Intent(this, MiPerfilCliente::class.java)
             startActivity(intent)
         }
-
+        val btnTicketsUsuario= findViewById<ImageView>(R.id.btn_ticketsUsuario)
+        btnTicketsUsuario.setOnClickListener {
+            val intent = Intent(this, TicketsCliente::class.java)
+            startActivity(intent)
+        }
         val cardContainer = findViewById<CardView>(R.id.CardView1)
         cardContainer.setOnClickListener {
             // Acción cuando se hace clic en el CardView
