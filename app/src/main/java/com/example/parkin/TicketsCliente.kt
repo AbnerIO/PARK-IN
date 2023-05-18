@@ -5,19 +5,21 @@ import androidx.activity.ComponentActivity
 import android.os.Bundle
 import android.widget.ImageView
 
-class MiPerfilCliente : ComponentActivity() {
+class TicketsCliente : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_mi_perfil_cliente)
+        setContentView(R.layout.activity_tickets_cliente)
+
         //Botones principales
+        val btnProfile= findViewById<ImageView>(R.id.btn_Profile)
+        btnProfile.setOnClickListener {
+            val intent = Intent(this, MiPerfilCliente::class.java)
+            startActivity(intent)
+        }
+
         val btnADondeVamos = findViewById<ImageView>(R.id.btn_ADondeVamos)
         btnADondeVamos.setOnClickListener {
             val intent = Intent(this, ADondeVamos::class.java)
-            startActivity(intent)
-        }
-        val btnTicketsUsuario= findViewById<ImageView>(R.id.btn_ticketsUsuario)
-        btnTicketsUsuario.setOnClickListener {
-            val intent = Intent(this, TicketsCliente::class.java)
             startActivity(intent)
         }
     }

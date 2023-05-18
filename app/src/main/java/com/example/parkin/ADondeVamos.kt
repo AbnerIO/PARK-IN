@@ -19,6 +19,12 @@ class ADondeVamos : ComponentActivity() {
             startActivity(intent)
         }
 
+        val btnTicketsUsuario= findViewById<ImageView>(R.id.btn_ticketsUsuario)
+        btnTicketsUsuario.setOnClickListener {
+            val intent = Intent(this, TicketsCliente::class.java)
+            startActivity(intent)
+        }
+
 
         val btnBuscar = findViewById<Button>(R.id.btn_buscar)
         btnBuscar.setOnClickListener {

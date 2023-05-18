@@ -22,6 +22,12 @@ class PagoSolicitud : ComponentActivity() {
             startActivity(intent)
         }
 
+        val btnTicketsUsuario= findViewById<ImageView>(R.id.btn_ticketsUsuario)
+        btnTicketsUsuario.setOnClickListener {
+            val intent = Intent(this, TicketsCliente::class.java)
+            startActivity(intent)
+        }
+
 
         val btnPagoSolicitud = findViewById<Button>(R.id.btn_pagoSolicitud)
         btnPagoSolicitud.setOnClickListener {
