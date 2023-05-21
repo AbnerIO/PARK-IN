@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AgregarSpot">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="152dp"
+        android:layout_height="54dp"
+        android:text="PARK-IN"
+        android:textColor="#000000"
+        android:textSize="38dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.128"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.044" />
+
+
+    <ImageView
+        android:id="@+id/btn_Profile"
+        android:layout_width="60dp"
+        android:layout_height="58dp"
+        android:src="@drawable/usuario"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.59"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.044" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="346dp"
+            android:layout_height="547dp"
+            app:cardBackgroundColor="#C1D9D9"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <!-- Contenido del rectángulo aquí -->
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="10dp"
+                android:text="AGREGAR SPOT"
+                android:textColor="#000000"
+                android:textSize="30dp" />
+
+            <EditText
+                android:id="@+id/editTextText2"
+                android:layout_width="230dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/input_background"
+                android:ems="10"
+                android:fontFamily="sans-serif"
+                android:hint="Dirección"
+                android:inputType="text"
+                android:paddingLeft="10dp" />
+
+            <EditText
+                android:id="@+id/editTextText4"
+                android:layout_width="200dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="140dp"
+                android:background="@drawable/input_background"
+                android:ems="10"
+                android:fontFamily="sans-serif"
+                android:hint="Espacios de auto "
+                android:inputType="number"
+                android:paddingLeft="10dp" />
+
+            <EditText
+                android:id="@+id/editTextText7"
+                android:layout_width="200dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="200dp"
+                android:background="@drawable/input_background"
+                android:ems="10"
+                android:fontFamily="sans-serif"
+                android:hint="Precio por hora"
+                android:inputType="number"
+                android:paddingLeft="10dp" />
+
+            <EditText
+                android:id="@+id/editTextText8"
+                android:layout_width="200dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="280dp"
+                android:background="@drawable/input_background"
+                android:ems="10"
+                android:fontFamily="sans-serif"
+                android:hint="Espacios de moto"
+                android:inputType="number"
+                android:paddingLeft="10dp" />
+
+            <EditText
+                android:id="@+id/editTextText9"
+                android:layout_width="200dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="340dp"
+                android:background="@drawable/input_background"
+                android:ems="10"
+                android:fontFamily="sans-serif"
+                android:hint="Precio por hora"
+                android:inputType="number"
+                android:paddingLeft="10dp" />
+
+            <Button
+                android:id="@+id/btn_SubirComprobante"
+                android:layout_width="170dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="400dp"
+                android:backgroundTint="#97C338"
+                android:shadowColor="#97C338"
+                android:text="Subir comprobante"
+                android:textColor="#FFFFFF"
+                android:textSize="19dp" />
+
+            <Button
+                android:id="@+id/btn_Confirmar"
+                android:layout_width="287dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="480dp"
+                android:backgroundTint="#000000"
+                android:shadowColor="#593D3D"
+                android:text="Confirmar"
+                android:textColor="#FFFFFF"
+                android:textSize="19dp" />
+
+            <ImageView
+                android:id="@+id/imageView15"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="260dp"
+                android:src="@drawable/linebikep" />
+
+            <ImageView
+                android:id="@+id/imageView16"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="120dp"
+                android:src="@drawable/linesportcar2p" />
+
+
+            <ImageView
+                android:id="@+id/imageView18"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="260dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/linemapslocation" />
+
+            <TextView
+                android:id="@+id/textView34"
+                android:layout_width="140dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="200dp"
+                android:layout_marginTop="395dp"
+                android:text="Sube documentos que comprueben que la propiedad es tuya"
+                android:textSize="17dp" />
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/btn_ticketsPropietario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/entradas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.899"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.962" />
+
+    <ImageView
+        android:id="@+id/btn_MisSpots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/circuloplus"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.962" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

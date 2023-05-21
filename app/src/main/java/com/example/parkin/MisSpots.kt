@@ -23,11 +23,13 @@ class MisSpots : ComponentActivity() {
             startActivity(intent)
         }
 
+
         val btnEditarSpot= findViewById<Button>(R.id.btn_editarSpot)
         btnEditarSpot.setOnClickListener {
             val intent = Intent(this, DescripcionDelSpot::class.java)
             startActivity(intent)
         }
+
 
 
     }

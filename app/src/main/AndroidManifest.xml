@@ -13,6 +13,9 @@
         android:theme="@style/Theme.PARKIN"
         tools:targetApi="31">
         <activity
+            android:name=".AgregarSpot"
+            android:exported="false" />
+        <activity
             android:name=".MiPerfilPropietario"
             android:exported="false" />
         <activity

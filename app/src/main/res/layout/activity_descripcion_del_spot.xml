@@ -195,7 +195,7 @@
     </RelativeLayout>
 
     <ImageView
-        android:id="@+id/btn_ticketsUsuario"
+        android:id="@+id/btn_ticketsPropietario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/entradas"
@@ -207,7 +207,7 @@
         app:layout_constraintVertical_bias="0.962" />
 
     <ImageView
-        android:id="@+id/btn_ADondeVamos"
+        android:id="@+id/btn_MisSpots"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/circuloplus"
