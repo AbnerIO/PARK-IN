@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MiPerfilPropietario">
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
+        android:text="PARK-IN"
+        android:textColor="#000000"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.128"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.044" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="346dp"
+            android:layout_height="547dp"
+            app:cardBackgroundColor="#C1D9D9"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <!-- Contenido del rectángulo aquí -->
+
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="110dp"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/profilemen" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="260dp"
+                android:layout_height="310dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="200dp"
+                app:cardBackgroundColor="#D1D9D9"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <!-- Contenido del rectángulo aquí -->
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nombre: Juanito Alimaña"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edad: 23 años"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="60dp"
+                    android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Correo: alejandro@hotmail.com"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="100dp"
+                    android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ubicación: México"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="160dp"
+                    android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Teléfono: 92117217718"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="240dp"
+                    android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Spots: 4"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="200dp"
+                    android:textSize="18sp" />
+                <Button
+                    android:id="@+id/btn_llego"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="190dp"
+                    android:backgroundTint="#609E43"
+                    android:shadowColor="#FFFFFF"
+                    android:text="Añadir"
+                    android:textColor="#FFFFFF" />
+            </androidx.cardview.widget.CardView>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/btn_ticketsUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/entradas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.899"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.962" />
+
+    <ImageView
+        android:id="@+id/btn_ADondeVamos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/circuloplus"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.962" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
