@@ -1,5 +1,7 @@
 package com.example.parkin
 
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -21,6 +23,15 @@ class MainActivity : ComponentActivity() {
         val btnRegistrarse = findViewById<Button>(R.id.btn_registrarse)
         val btnLogin = findViewById<Button>(R.id.btn_login)
 
+        // Cosas heredadas
+        val extras = intent.extras
+        if (extras != null) {
+            val message = extras.getString("message") // Obtiene el valor del extra utilizando la clave
+            if (message != null) {
+                mostrarAlerta(message)
+            }
+        }
+
         btnRegistrarse.setOnClickListener {
             val intent = Intent(this, Register::class.java)
             startActivity(intent)
@@ -30,5 +41,16 @@ class MainActivity : ComponentActivity() {
             val intent = Intent(this, ADondeVamos::class.java)
             startActivity(intent)
         }
+    }
+
+    // Funcion imprimir alerta en pantalla
+    fun mostrarAlerta(valor: String) {
+        val alertDialog = AlertDialog.Builder(this)
+        alertDialog.setTitle("Bienvenido")
+        alertDialog.setMessage("$valor")
+        alertDialog.setPositiveButton("Aceptar", DialogInterface.OnClickListener { dialog, _ ->
+            dialog.dismiss()
+        })
+        alertDialog.show()
     }
 }
