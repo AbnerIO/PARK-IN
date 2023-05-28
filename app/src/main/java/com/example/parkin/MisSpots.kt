@@ -1,5 +1,7 @@
 package com.example.parkin
 
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.content.Intent
 import androidx.activity.ComponentActivity
 import android.os.Bundle
@@ -30,7 +32,24 @@ class MisSpots : ComponentActivity() {
             startActivity(intent)
         }
 
+        // Cosas heredadas
+        val extras = intent.extras
+        if (extras != null) {
+            val message =
+                extras.getString("message") // Obtiene el valor del extra utilizando la clave
+            if (message != null) {
+                mostrarAlerta(message)
+            }
+        }
 
-
+    }
+    fun mostrarAlerta(valor: String) {
+        val alertDialog = AlertDialog.Builder(this)
+        alertDialog.setTitle("Mensaje")
+        alertDialog.setMessage(valor)
+        alertDialog.setPositiveButton("Aceptar", DialogInterface.OnClickListener { dialog, _ ->
+            dialog.dismiss()
+        })
+        alertDialog.show()
     }
 }
