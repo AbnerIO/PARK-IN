@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import androidx.activity.ComponentActivity
+import com.android.volley.BuildConfig
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -20,6 +21,9 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome)
+
+        val URL = "http://192.168.0.7:5000"
+        println(URL)
         val btnRegistrarse = findViewById<Button>(R.id.btn_registrarse)
         val btnLogin = findViewById<Button>(R.id.btn_login)
 
@@ -58,7 +62,7 @@ class MainActivity : ComponentActivity() {
 
             // Enlace y método
             val request = Request.Builder()
-                .url("http://192.168.0.8:5000/login")
+                .url("$URL/login")
                 .post(formBody)
                 .build()
 

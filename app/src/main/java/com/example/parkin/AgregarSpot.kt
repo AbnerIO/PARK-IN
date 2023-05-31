@@ -23,6 +23,8 @@ class AgregarSpot : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_agregar_spot)
+
+        val URL = "http://192.168.0.7:5000"
         // Funciones base
         val btnTicketsPropietarios = findViewById<ImageView>(R.id.btn_ticketsPropietario)
         btnTicketsPropietarios.setOnClickListener {
@@ -78,7 +80,7 @@ class AgregarSpot : ComponentActivity() {
 
                 // Enlace y método
                 val request = Request.Builder()
-                    .url("http://192.168.0.8:5000/spots/add")
+                    .url("$URL/spots/add")
                     .post(formBody)
                     .build()
                 // Corrutinado (ejecución)

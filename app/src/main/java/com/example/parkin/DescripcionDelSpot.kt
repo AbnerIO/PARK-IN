@@ -1,5 +1,6 @@
 package com.example.parkin
 
+import android.app.AlertDialog
 import android.content.Intent
 import androidx.activity.ComponentActivity
 import android.os.Bundle
@@ -27,5 +28,22 @@ class DescripcionDelSpot : ComponentActivity() {
             startActivity(intent)
         }
 
+        // Acciones
+        val extras = intent.extras
+        if (extras != null) {
+            val id = extras.getString("id").toString() // Obtiene el valor del extra utilizando la clave
+
+        }
+
+    }
+
+    fun mostrarAlerta(valor: String) {
+        val alertDialog = AlertDialog.Builder(this)
+        alertDialog.setTitle("Bienvenido")
+        alertDialog.setMessage(valor)
+        alertDialog.setPositiveButton("Aceptar") { dialog, _ ->
+            dialog.dismiss()
+        }
+        alertDialog.show()
     }
 }

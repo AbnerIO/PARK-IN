@@ -9,6 +9,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.RadioGroup
 import androidx.activity.ComponentActivity
+import com.android.volley.BuildConfig
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -18,6 +19,7 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 import java.io.IOException
 import org.json.JSONObject
+import java.net.URL
 
 
 class Register : ComponentActivity() {
@@ -25,6 +27,7 @@ class Register : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
+        val URL = "http://192.168.0.7:5000"
         val intent = Intent(this, MainActivity::class.java)
 
         // Referencias a botones
@@ -58,7 +61,7 @@ class Register : ComponentActivity() {
 
             // Enlace y método
             val request = Request.Builder()
-                .url("http://192.168.0.8:5000/users/add")
+                .url("$URL/users/add")
                 .post(formBody)
                 .build()
             // Corrutinado (ejecución)
