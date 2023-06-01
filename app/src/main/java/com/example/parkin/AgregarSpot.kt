@@ -24,7 +24,7 @@ class AgregarSpot : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_agregar_spot)
 
-        val URL = "http://192.168.0.7:5000"
+        val URL = "http://192.168.0.11:5000"
         // Funciones base
         val btnTicketsPropietarios = findViewById<ImageView>(R.id.btn_ticketsPropietario)
         btnTicketsPropietarios.setOnClickListener {

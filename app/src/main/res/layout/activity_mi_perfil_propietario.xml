@@ -59,15 +59,16 @@
                 <!-- Contenido del rectángulo aquí -->
 
                 <TextView
-                    android:id="@+id/textView15"
+                    android:id="@+id/nombre"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Nombre: Juanito Alimaña"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="20dp"
+                    android:text="Nombre: Juanito Alimaña"
                     android:textSize="18sp" />
+
                 <TextView
-                    android:id="@+id/textView16"
+                    android:id="@+id/tipo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Edad: 23 años"
@@ -75,7 +76,7 @@
                     android:layout_marginTop="60dp"
                     android:textSize="18sp" />
                 <TextView
-                    android:id="@+id/textView17"
+                    android:id="@+id/correo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Correo: alejandro@hotmail.com"
@@ -83,7 +84,7 @@
                     android:layout_marginTop="100dp"
                     android:textSize="18sp" />
                 <TextView
-                    android:id="@+id/textView18"
+                    android:id="@+id/ubicacion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Ubicación: México"
@@ -91,7 +92,7 @@
                     android:layout_marginTop="160dp"
                     android:textSize="18sp" />
                 <TextView
-                    android:id="@+id/textView19"
+                    android:id="@+id/telefono"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Teléfono: 92117217718"
@@ -99,7 +100,7 @@
                     android:layout_marginTop="240dp"
                     android:textSize="18sp" />
                 <TextView
-                    android:id="@+id/textView20"
+                    android:id="@+id/spots"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Spots: 4"

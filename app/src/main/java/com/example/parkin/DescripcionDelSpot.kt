@@ -41,7 +41,7 @@ class DescripcionDelSpot : ComponentActivity() {
             startActivity(intent)
         }
 
-        val URL = "http://192.168.0.7:5000"
+        val URL = "http://192.168.0.11:5000"
 
         // Acciones
         val extras = intent.extras

@@ -32,7 +32,8 @@ class MisSpots : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mis_spots)
-        val URL = "http://192.168.0.7:5000"
+        val owner_id = 1
+        val URL = "http://192.168.0.11:5000"
         val intentDescripcionDelSpot = Intent(this, DescripcionDelSpot::class.java)
         // Funciones base
         val btnTicketsPropietarios = findViewById<ImageView>(R.id.btn_ticketsPropietario)
@@ -42,8 +43,9 @@ class MisSpots : ComponentActivity() {
         }
         val btnPerfilPropietario = findViewById<ImageView>(R.id.btn_Profile)
         btnPerfilPropietario.setOnClickListener {
-            val intent = Intent(this, MiPerfilPropietario::class.java)
-            startActivity(intent)
+            val intentPerfilPropietario = Intent(this, MiPerfilPropietario::class.java)
+            intentPerfilPropietario.putExtra("owner_id", owner_id)
+            startActivity(intentPerfilPropietario)
         }
 
 
@@ -57,7 +59,6 @@ class MisSpots : ComponentActivity() {
             }
         }
 
-        val owner_id = 1
 
         val cardContainer = findViewById<LinearLayout>(R.id.cardContainer)
         // peticion
