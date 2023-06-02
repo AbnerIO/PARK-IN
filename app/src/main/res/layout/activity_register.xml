@@ -12,15 +12,17 @@
         android:layout_height="48dp"
         android:background="@drawable/input_background"
         android:ems="10"
-        android:hint="Nombre Completo"
+        android:hint="@string/ZCX"
         android:inputType="text"
-        android:paddingLeft="10dp"
+        android:paddingStart="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.11" />
+        app:layout_constraintVertical_bias="0.11"
+        android:autofillHints=""
+        tools:ignore="RtlSymmetry" />
 
     <EditText
         android:id="@+id/input_correo"
@@ -28,15 +30,17 @@
         android:layout_height="48dp"
         android:background="@drawable/input_background"
         android:ems="10"
-        android:hint="Correo"
+        android:hint="@string/D"
         android:inputType="textEmailAddress"
-        android:paddingLeft="10dp"
+        android:paddingStart="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/input_nombre"
-        app:layout_constraintVertical_bias="0.053" />
+        app:layout_constraintVertical_bias="0.053"
+        android:autofillHints=""
+        tools:ignore="RtlSymmetry" />
 
     <EditText
         android:id="@+id/input_contraseña"
@@ -45,15 +49,17 @@
         android:background="@drawable/input_background"
         android:ems="10"
         android:fontFamily="sans-serif"
-        android:hint="Contraseña"
+        android:hint="@string/contrase_a"
         android:inputType="textPassword"
-        android:paddingLeft="10dp"
+        android:paddingStart="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/input_correo"
-        app:layout_constraintVertical_bias="0.05" />
+        app:layout_constraintVertical_bias="0.05"
+        android:autofillHints=""
+        tools:ignore="RtlSymmetry" />
 
     <EditText
         android:id="@+id/input_contraseña2"
@@ -62,15 +68,17 @@
         android:background="@drawable/input_background"
         android:ems="10"
         android:fontFamily="sans-serif"
-        android:hint="Reescribe la contraseña"
+        android:hint="@string/reescribe_la_contrase_a"
         android:inputType="textPassword"
-        android:paddingLeft="10dp"
+        android:paddingStart="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/input_contraseña"
-        app:layout_constraintVertical_bias="0.061" />
+        app:layout_constraintVertical_bias="0.061"
+        android:autofillHints=""
+        tools:ignore="RtlSymmetry" />
 
     <RadioGroup
         android:id="@+id/radio_tipoCliente"
@@ -88,7 +96,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="48dp"
-            android:text="Propietario"
+            android:text="@string/propietario"
             android:textSize="20sp" />
 
         <RadioButton
@@ -96,7 +104,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="48dp"
-            android:text="Usuario"
+            android:text="@string/usuario"
             android:textSize="20sp" />
     </RadioGroup>
 
@@ -105,9 +113,9 @@
         android:layout_width="320dp"
         android:layout_height="80dp"
         android:backgroundTint="#000000"
-        android:text="REGISTRARME"
+        android:text="@string/registrarme"
         android:textColor="#FFFFFF"
-        android:textSize="20dp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
@@ -119,7 +127,7 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="¿Eres propietario o usuario?"
+        android:text="@string/eres_propietario_o_usuario"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/radio_tipoCliente"
         app:layout_constraintEnd_toEndOf="parent"
@@ -135,14 +143,16 @@
         android:background="@drawable/input_background"
         android:ems="10"
         android:fontFamily="sans-serif"
-        android:hint="Teléfono"
+        android:hint="@string/tel_fono"
         android:inputType="phone"
-        android:paddingLeft="10dp"
+        android:paddingStart="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/input_contraseña2"
-        app:layout_constraintVertical_bias="0.107" />
+        app:layout_constraintVertical_bias="0.107"
+        android:autofillHints=""
+        tools:ignore="RtlSymmetry" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

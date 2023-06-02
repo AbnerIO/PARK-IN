@@ -49,7 +49,7 @@ class MiPerfilPropietario : ComponentActivity() {
                 val value = bundle.get(key)
                 owner_id = value
             }
-
+            owner_id=5
             if (owner_id != null) {
                 // peticion
                 val client = OkHttpClient()

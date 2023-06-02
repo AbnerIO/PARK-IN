@@ -5,21 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MiPerfilCliente">
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="54dp"
-        android:text="PARK-IN"
+        android:layout_marginStart="100dp"
+        android:text="@string/cx"
         android:textColor="#000000"
-        android:textSize="50dp"
+        android:textSize="50sp"
         android:textStyle="bold"
-        android:layout_marginLeft="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.044" />
+        app:layout_constraintVertical_bias="0.044"
+        tools:ignore="TextSizeCheck,VisualLintOverlap" />
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
@@ -43,18 +45,20 @@
                 android:id="@+id/imageView10"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
-                android:layout_marginLeft="110dp"
+                android:layout_marginStart="110dp"
                 android:layout_marginTop="50dp"
-                android:src="@drawable/profilemen" />
+                android:src="@drawable/profilemen"
+                android:contentDescription="@string/zdsg" />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="260dp"
                 android:layout_height="310dp"
-                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
                 android:layout_marginTop="200dp"
                 app:cardBackgroundColor="#D1D9D9"
                 app:cardCornerRadius="8dp"
-                app:cardElevation="4dp">
+                app:cardElevation="4dp"
+                tools:ignore="TextSizeCheck">
 
                 <!-- Contenido del rectángulo aquí -->
 
@@ -62,49 +66,60 @@
                     android:id="@+id/textView15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Nombre: Juanito Alimaña"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="20dp"
+                    android:text="@string/nombre_juanito_alima_a"
+                    android:textColor="#455A64"
                     android:textSize="18sp" />
+
                 <TextView
                     android:id="@+id/textView16"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Edad: 23 años"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="60dp"
+                    android:text="@string/edad_23_a_os"
+                    android:textColor="#455A64"
                     android:textSize="18sp" />
+
                 <TextView
                     android:id="@+id/textView17"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Correo: alejandro@hotmail.com"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="100dp"
+                    android:text="@string/correo_alejandro_hotmail_com"
+                    android:textColor="#455A64"
                     android:textSize="18sp" />
+
                 <TextView
                     android:id="@+id/textView18"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Ubicación: México"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="160dp"
+                    android:text="@string/ubicaci_n_m_xico"
+                    android:textColor="#455A64"
                     android:textSize="18sp" />
+
                 <TextView
                     android:id="@+id/textView19"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Teléfono: 92117217718"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="200dp"
+                    android:text="@string/A"
+                    android:textColor="#455A64"
                     android:textSize="18sp" />
+
                 <TextView
                     android:id="@+id/textView20"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Vehiculo: Toyota Yaris 2020"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="240dp"
+                    android:text="@string/vehiculo_toyota_yaris_2020"
+                    android:textColor="#455A64"
                     android:textSize="18sp" />
             </androidx.cardview.widget.CardView>
 
@@ -123,7 +138,8 @@
         app:layout_constraintHorizontal_bias="0.899"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.962" />
+        app:layout_constraintVertical_bias="0.962"
+        android:contentDescription="@string/YRTEY" />
 
     <ImageView
         android:id="@+id/btn_ADondeVamos"
@@ -135,7 +151,8 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.962" />
+        app:layout_constraintVertical_bias="0.962"
+        android:contentDescription="@string/RET34" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

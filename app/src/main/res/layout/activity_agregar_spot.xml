@@ -10,16 +10,17 @@
         android:id="@+id/textView2"
         android:layout_width="152dp"
         android:layout_height="54dp"
-        android:text="PARK-IN"
+        android:text="@string/park_inq"
         android:textColor="#000000"
-        android:textSize="38dp"
+        android:textSize="38sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.044" />
+        app:layout_constraintVertical_bias="0.044"
+        tools:ignore="TextSizeCheck,VisualLintOverlap" />
 
 
     <ImageView
@@ -32,7 +33,8 @@
         app:layout_constraintHorizontal_bias="0.59"
         app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.044" />
+        app:layout_constraintVertical_bias="0.044"
+        android:contentDescription="@string/qwe" />
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
@@ -54,63 +56,77 @@
             <EditText
                 android:id="@+id/input_calle"
                 android:layout_width="230dp"
-                android:layout_height="30dp"
+                android:layout_height="48dp"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="10dp"
+                android:autofillHints=""
                 android:background="@drawable/input_background"
                 android:ems="10"
                 android:fontFamily="sans-serif"
-                android:hint="Calle"
+                android:hint="@string/calle"
                 android:inputType="text"
-                android:paddingLeft="10dp" />
+                android:paddingStart="10dp"
+                tools:ignore="RtlSymmetry" />
+
             <EditText
                 android:id="@+id/input_numero"
                 android:layout_width="50dp"
-                android:layout_height="30dp"
+                android:layout_height="48dp"
                 android:layout_marginStart="270dp"
                 android:layout_marginTop="10dp"
+                android:autofillHints=""
                 android:background="@drawable/input_background"
                 android:ems="10"
                 android:fontFamily="sans-serif"
-                android:hint="#"
+                android:hint="@string/qweqew"
                 android:inputType="number"
-                android:paddingLeft="10dp" />
+                android:paddingStart="10dp"
+                tools:ignore="RtlSymmetry" />
+
             <EditText
                 android:id="@+id/input_colonia"
                 android:layout_width="230dp"
-                android:layout_height="30dp"
+                android:layout_height="48dp"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="50dp"
+                android:autofillHints=""
                 android:background="@drawable/input_background"
                 android:ems="10"
                 android:fontFamily="sans-serif"
-                android:hint="Colonia"
+                android:hint="@string/coloniae"
                 android:inputType="text"
-                android:paddingLeft="10dp" />
+                android:paddingStart="10dp"
+                tools:ignore="RtlSymmetry" />
+
             <EditText
                 android:id="@+id/input_ciudad"
                 android:layout_width="110dp"
-                android:layout_height="30dp"
+                android:layout_height="48dp"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="90dp"
+                android:autofillHints=""
                 android:background="@drawable/input_background"
                 android:ems="10"
                 android:fontFamily="sans-serif"
-                android:hint="Ciudad"
+                android:hint="@string/qwea"
                 android:inputType="text"
-                android:paddingLeft="10dp" />
+                android:paddingStart="10dp"
+                tools:ignore="RtlSymmetry" />
+
             <EditText
                 android:id="@+id/input_estado"
                 android:layout_width="110dp"
-                android:layout_height="30dp"
+                android:layout_height="48dp"
                 android:layout_marginStart="150dp"
                 android:layout_marginTop="90dp"
+                android:autofillHints=""
                 android:background="@drawable/input_background"
                 android:ems="10"
                 android:fontFamily="sans-serif"
-                android:hint="Estado"
+                android:hint="@string/estadod"
                 android:inputType="text"
-                android:paddingLeft="10dp" />
+                android:paddingStart="10dp"
+                tools:ignore="RtlSymmetry" />
             <EditText
                 android:id="@+id/input_espacios_auto"
                 android:layout_width="200dp"
@@ -120,9 +136,11 @@
                 android:background="@drawable/input_background"
                 android:ems="10"
                 android:fontFamily="sans-serif"
-                android:hint="Espacios de auto "
+                android:hint="@string/espacios_de_auto"
                 android:inputType="number"
-                android:paddingLeft="10dp" />
+                android:paddingStart="10dp"
+                tools:ignore="RtlSymmetry"
+                android:autofillHints="" />
 
             <EditText
                 android:id="@+id/input_precio_auto"
@@ -130,12 +148,14 @@
                 android:layout_height="48dp"
                 android:layout_marginStart="115dp"
                 android:layout_marginTop="200dp"
+                android:autofillHints=""
                 android:background="@drawable/input_background"
                 android:ems="10"
                 android:fontFamily="sans-serif"
-                android:hint="Precio por hora"
+                android:hint="@string/precio_por_hora"
                 android:inputType="number"
-                android:paddingLeft="10dp" />
+                android:paddingStart="10dp"
+                tools:ignore="RtlSymmetry,DuplicateSpeakableTextCheck" />
 
             <EditText
                 android:id="@+id/input_espacio_moto"
@@ -146,9 +166,11 @@
                 android:background="@drawable/input_background"
                 android:ems="10"
                 android:fontFamily="sans-serif"
-                android:hint="Espacios de moto"
+                android:hint="@string/espacios_de_moto"
                 android:inputType="number"
-                android:paddingLeft="10dp" />
+                android:paddingStart="10dp"
+                tools:ignore="RtlSymmetry"
+                android:autofillHints="" />
 
             <EditText
                 android:id="@+id/input_precio_moto"
@@ -159,9 +181,11 @@
                 android:background="@drawable/input_background"
                 android:ems="10"
                 android:fontFamily="sans-serif"
-                android:hint="Precio por hora"
+                android:hint="@string/precio_por_horav"
                 android:inputType="number"
-                android:paddingLeft="10dp" />
+                android:paddingStart="10dp"
+                android:autofillHints=""
+                tools:ignore="RtlSymmetry" />
 
             <Button
                 android:id="@+id/btn_SubirComprobante"
@@ -171,9 +195,10 @@
                 android:layout_marginTop="400dp"
                 android:backgroundTint="#97C338"
                 android:shadowColor="#97C338"
-                android:text="Subir comprobante"
-                android:textColor="#FFFFFF"
-                android:textSize="19dp" />
+                android:text="@string/subir_comprobante"
+                android:textColor="#616161"
+                android:textSize="19sp"
+                tools:ignore="TextSizeCheck" />
 
             <Button
                 android:id="@+id/btn_Confirmar"
@@ -183,42 +208,48 @@
                 android:layout_marginTop="480dp"
                 android:backgroundTint="#000000"
                 android:shadowColor="#593D3D"
-                android:text="Confirmar"
+                android:text="@string/confirmar"
                 android:textColor="#FFFFFF"
-                android:textSize="19dp" />
+                android:textSize="19sp" />
 
             <ImageView
                 android:id="@+id/imageView15"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="260dp"
-                android:src="@drawable/linebikep" />
+                android:src="@drawable/linebikep"
+                android:contentDescription="@string/todoads" />
 
             <ImageView
                 android:id="@+id/imageView16"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="120dp"
-                android:src="@drawable/linesportcar2p" />
+                android:src="@drawable/linesportcar2p"
+                android:contentDescription="@string/asda"
+                tools:ignore="ContentDescription" />
 
             <ImageView
                 android:id="@+id/img_finder"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:layout_marginLeft="260dp"
+                android:layout_marginStart="260dp"
                 android:layout_marginTop="40dp"
-                android:src="@drawable/linemapslocation" />
+                android:src="@drawable/linemapslocation"
+                android:contentDescription="@string/asdzxc" />
 
             <TextView
                 android:id="@+id/textView34"
                 android:layout_width="140dp"
                 android:layout_height="80dp"
-                android:layout_marginLeft="200dp"
+                android:layout_marginStart="200dp"
                 android:layout_marginTop="395dp"
-                android:text="Sube documentos que comprueben que la propiedad es tuya"
-                android:textSize="17dp" />
+                android:text="@string/c"
+                android:textColor="#455A64"
+                android:textSize="17sp"
+                tools:ignore="TextSizeCheck" />
         </androidx.cardview.widget.CardView>
 
 
@@ -234,7 +265,9 @@
         app:layout_constraintHorizontal_bias="0.899"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.962" />
+        app:layout_constraintVertical_bias="0.962"
+        android:contentDescription="@string/asdasdad"
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/btn_MisSpots"
@@ -246,6 +279,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.962" />
+        app:layout_constraintVertical_bias="0.962"
+        android:contentDescription="@string/asd" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

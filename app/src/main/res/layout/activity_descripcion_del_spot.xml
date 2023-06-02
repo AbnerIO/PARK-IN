@@ -10,16 +10,17 @@
         android:id="@+id/textView2"
         android:layout_width="152dp"
         android:layout_height="54dp"
-        android:text="PARK-IN"
+        android:text="@string/m"
         android:textColor="#000000"
-        android:textSize="38dp"
+        android:textSize="38sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.044" />
+        app:layout_constraintVertical_bias="0.044"
+        tools:ignore="TextSizeCheck,VisualLintOverlap" />
 
 
     <ImageView
@@ -32,7 +33,8 @@
         app:layout_constraintHorizontal_bias="0.59"
         app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.044" />
+        app:layout_constraintVertical_bias="0.044"
+        android:contentDescription="@string/z" />
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
@@ -46,7 +48,8 @@
             android:layout_height="547dp"
             app:cardBackgroundColor="#C1D9D9"
             app:cardCornerRadius="8dp"
-            app:cardElevation="4dp">
+            app:cardElevation="4dp"
+            tools:ignore="TextSizeCheck">
 
             <!-- Contenido del rectángulo aquí -->
 
@@ -55,140 +58,146 @@
                 android:id="@+id/textView11"
                 android:layout_width="230dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="60dp"
+                android:layout_marginStart="60dp"
                 android:layout_marginTop="10dp"
-                android:text="DESCRIPCIÓN DEL SPOT"
+                android:text="@string/descripci_n_del_spot"
                 android:textAlignment="center"
                 android:textColor="#000000"
-                android:textSize="30dp" />
+                android:textSize="30sp"
+                tools:ignore="TextSizeCheck" />
 
             <ImageView
                 android:id="@+id/imageView6"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginLeft="30dp"
+                android:layout_marginStart="30dp"
                 android:layout_marginTop="100dp"
+                android:contentDescription="@string/dsda"
                 android:src="@drawable/linehousep" />
 
             <TextView
                 android:id="@+id/textViewDireccion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="140dp"
+                android:layout_marginStart="140dp"
                 android:layout_marginTop="110dp"
-                android:text="Dirección del spot"
+                android:text="@string/direcci_n_del_spot"
                 android:textColor="#000000"
-                android:textSize="25dp" />
+                android:textSize="25sp" />
 
             <TextView
                 android:id="@+id/textView26"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
                 android:layout_marginTop="220dp"
-                android:text="Espacios de automóvil:"
+                android:text="@string/espacios_de_autom_vil"
                 android:textColor="#000000"
-                android:textSize="25dp"
+                android:textSize="25sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textViewEspaciosAutos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
                 android:layout_marginTop="260dp"
-                android:text="1"
-                android:textSize="25dp" />
+                android:text="@string/_1"
+                android:textSize="25sp" />
 
             <TextView
                 android:id="@+id/textView28"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
                 android:layout_marginTop="300dp"
-                android:text="Precio por hora: "
+                android:text="@string/asdc"
                 android:textColor="#000000"
-                android:textSize="25dp" />
+                android:textSize="25sp" />
 
             <TextView
                 android:id="@+id/textViewPreciosAutos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
                 android:layout_marginTop="340dp"
-                android:text="$100"
-                android:textSize="25dp" />
+                android:text="@string/_100"
+                android:textSize="25sp" />
 
             <TextView
                 android:id="@+id/textView30"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
                 android:layout_marginTop="380dp"
-                android:text="Espacios de bicicletas:"
+                android:text="@string/espacios_de_bicicletas"
                 android:textColor="#000000"
-                android:textSize="25dp"
+                android:textSize="25sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textViewEspaciosBicis"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
                 android:layout_marginTop="420dp"
-                android:text="1"
-                android:textSize="25dp" />
+                android:text="@string/ads"
+                android:textSize="25sp" />
 
             <TextView
                 android:id="@+id/textView32"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
                 android:layout_marginTop="460dp"
-                android:text="Precio por hora: "
+                android:text="@string/vbb"
                 android:textColor="#000000"
-                android:textSize="25dp" />
+                android:textSize="25sp" />
 
             <TextView
                 android:id="@+id/textViewPreciosBicis"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
                 android:layout_marginTop="500dp"
-                android:text="$20"
-                android:textSize="25dp" />
+                android:text="@string/_20"
+                android:textSize="25sp" />
 
             <ImageView
                 android:id="@+id/imageView11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="70dp"
+                android:layout_marginStart="70dp"
                 android:layout_marginTop="255dp"
+                android:contentDescription="@string/b"
                 android:src="@drawable/lineeditalt2" />
 
             <ImageView
                 android:id="@+id/imageView12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginStart="100dp"
                 android:layout_marginTop="330dp"
-                android:src="@drawable/lineeditalt2" />
+                android:src="@drawable/lineeditalt2"
+                android:contentDescription="@string/acxz" />
 
             <ImageView
                 android:id="@+id/imageView13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="70dp"
+                android:layout_marginStart="70dp"
                 android:layout_marginTop="410dp"
+                android:contentDescription="@string/vcb"
                 android:src="@drawable/lineeditalt2" />
 
             <ImageView
                 android:id="@+id/imageView14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginStart="100dp"
                 android:layout_marginTop="490dp"
-                android:src="@drawable/lineeditalt2" />
+                android:src="@drawable/lineeditalt2"
+                android:contentDescription="@string/asfvcx" />
         </androidx.cardview.widget.CardView>
 
 
@@ -204,7 +213,8 @@
         app:layout_constraintHorizontal_bias="0.899"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.962" />
+        app:layout_constraintVertical_bias="0.962"
+        android:contentDescription="@string/dcsav" />
 
     <ImageView
         android:id="@+id/btn_MisSpots"
@@ -216,5 +226,6 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.962" />
+        app:layout_constraintVertical_bias="0.962"
+        android:contentDescription="@string/xczzxc" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,16 +10,17 @@
         android:id="@+id/textView2"
         android:layout_width="152dp"
         android:layout_height="54dp"
-        android:text="PARK-IN"
+        android:text="@string/v"
         android:textColor="#000000"
-        android:textSize="38dp"
+        android:textSize="38sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.044" />
+        app:layout_constraintVertical_bias="0.044"
+        tools:ignore="TextSizeCheck,VisualLintOverlap" />
 
 
     <ImageView
@@ -32,7 +33,8 @@
         app:layout_constraintHorizontal_bias="0.59"
         app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.044" />
+        app:layout_constraintVertical_bias="0.044"
+        android:contentDescription="@string/cvzxvb" />
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
@@ -47,7 +49,8 @@
             android:layout_height="547dp"
             app:cardBackgroundColor="#D9D9D9"
             app:cardCornerRadius="8dp"
-            app:cardElevation="4dp">
+            app:cardElevation="4dp"
+            tools:ignore="TextSizeCheck">
 
             <!-- Contenido del rectángulo aquí -->
 
@@ -55,85 +58,97 @@
                 android:id="@+id/spinnercar"
                 android:layout_width="120dp"
                 android:layout_height="48dp"
-                android:layout_marginLeft="140dp"
-                android:layout_marginTop="80dp" />
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="80dp"
+                tools:ignore="DuplicateSpeakableTextCheck" />
 
             <Spinner
                 android:id="@+id/spinnerbike"
                 android:layout_width="120dp"
                 android:layout_height="48dp"
-                android:layout_marginLeft="140dp"
+                android:layout_marginStart="140dp"
                 android:layout_marginTop="125dp" />
 
             <TextView
                 android:id="@+id/textView11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
-                android:text="SOLICITUD"
+                android:text="@string/solicitud"
                 android:textColor="#000000"
-                android:textSize="30dp" />
+                android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/textView12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="60dp"
+                android:layout_marginStart="60dp"
                 android:layout_marginTop="60dp"
-                android:text="Número de vehículos que ingresan:" />
+                android:text="@string/n_mero_de_veh_culos_que_ingresan"
+                android:textColor="#455A64" />
+
             <TextView
                 android:id="@+id/textView19"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="60dp"
+                android:layout_marginStart="60dp"
                 android:layout_marginTop="180dp"
-                android:text="Hora de entrada:" />
+                android:text="@string/hora_de_entrada"
+                android:textColor="#455A64" />
+
             <TextView
                 android:id="@+id/textView20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="60dp"
+                android:layout_marginStart="60dp"
                 android:layout_marginTop="260dp"
-                android:text="Hora de salida:" />
+                android:text="@string/hora_de_salida"
+                android:textColor="#455A64" />
+
             <TextView
                 android:id="@+id/textView21"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="60dp"
+                android:layout_marginStart="60dp"
                 android:layout_marginTop="340dp"
-                android:text="Notas:" />
+                android:text="@string/notas"
+                android:textColor="#455A64" />
 
             <TextView
                 android:id="@+id/CAR_PRICE"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="60dp"
+                android:layout_marginStart="60dp"
                 android:layout_marginTop="100dp"
-                android:text="$CP" />
+                android:text="@string/cp"
+                android:textColor="#455A64" />
 
             <TextView
                 android:id="@+id/BIKEPRICE"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="60dp"
+                android:layout_marginStart="60dp"
                 android:layout_marginTop="135dp"
-                android:text="$BP" />
+                android:text="@string/bp"
+                android:textColor="#455A64" />
 
             <ImageView
                 android:id="@+id/imageView7"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
+                android:layout_marginStart="100dp"
                 android:layout_marginTop="95dp"
-                android:layout_marginLeft="100dp"
+                android:contentDescription="@string/mj"
                 android:src="@drawable/linesportcar2p" />
 
             <ImageView
                 android:id="@+id/imageView8"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
+                android:layout_marginStart="100dp"
                 android:layout_marginTop="125dp"
-                android:layout_marginLeft="100dp"
+                android:contentDescription="@string/ñ"
                 android:src="@drawable/linebikep" />
 
 
@@ -141,55 +156,58 @@
                 android:id="@+id/btn_pagar"
                 android:layout_width="240dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="60dp"
+                android:layout_marginStart="60dp"
                 android:layout_marginTop="480dp"
                 android:backgroundTint="#000000"
-                android:text="Pagar"
+                android:text="@string/poó"
                 android:textColor="#FFFFFF" />
 
             <EditText
                 android:id="@+id/editTextTime"
                 android:layout_width="240dp"
                 android:layout_height="50dp"
-                android:layout_marginLeft="60dp"
+                android:layout_marginStart="60dp"
                 android:layout_marginTop="205dp"
+                android:autofillHints=""
                 android:background="@drawable/input_background"
                 android:ems="10"
                 android:inputType="time"
-                tools:ignore="SpeakableTextPresentCheck" />
+                tools:ignore="LabelFor,SpeakableTextPresentCheck" />
 
             <EditText
                 android:id="@+id/editTextTime1"
                 android:layout_width="240dp"
                 android:layout_height="50dp"
-                android:layout_marginLeft="60dp"
+                android:layout_marginStart="60dp"
                 android:layout_marginTop="285dp"
+                android:autofillHints=""
                 android:background="@drawable/input_background"
                 android:ems="10"
                 android:inputType="time"
-                tools:ignore="SpeakableTextPresentCheck" />
+                tools:ignore="LabelFor,SpeakableTextPresentCheck" />
 
             <EditText
                 android:id="@+id/Nota"
                 android:layout_width="240dp"
                 android:layout_height="100dp"
-                android:layout_marginLeft="60dp"
+                android:layout_marginStart="60dp"
                 android:layout_marginTop="365dp"
+                android:autofillHints=""
                 android:background="@drawable/input_background"
                 android:ems="10"
                 android:hint=""
                 android:inputType="textMultiLine"
-                tools:ignore="SpeakableTextPresentCheck" />
+                tools:ignore="LabelFor,SpeakableTextPresentCheck" />
 
             <Button
                 android:id="@+id/btn_verUrl"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="190dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginLeft="190dp"
-                android:text="Ver en Mapa"
                 android:backgroundTint="#742D2D"
-                android:textColor="#FFFFFF"/>
+                android:text="@string/ver_en_mapa"
+                android:textColor="#FFFFFF" />
 
         </androidx.cardview.widget.CardView>
 
@@ -208,7 +226,8 @@
         app:layout_constraintHorizontal_bias="0.899"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.962" />
+        app:layout_constraintVertical_bias="0.962"
+        android:contentDescription="@string/nb" />
 
     <ImageView
         android:id="@+id/btn_ADondeVamos"
@@ -220,7 +239,8 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.962" />
+        app:layout_constraintVertical_bias="0.962"
+        android:contentDescription="@string/cvb" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,16 +10,17 @@
         android:id="@+id/textView2"
         android:layout_width="152dp"
         android:layout_height="54dp"
-        android:text="PARK-IN"
+        android:text="@string/AS"
         android:textColor="#000000"
-        android:textSize="38dp"
+        android:textSize="38sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.044" />
+        app:layout_constraintVertical_bias="0.044"
+        tools:ignore="TextSizeCheck,VisualLintOverlap" />
 
 
     <ImageView
@@ -32,7 +33,8 @@
         app:layout_constraintHorizontal_bias="0.59"
         app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.044" />
+        app:layout_constraintVertical_bias="0.044"
+        android:contentDescription="@string/XC" />
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
@@ -46,7 +48,8 @@
             android:layout_height="547dp"
             app:cardBackgroundColor="#C1D9D9"
             app:cardCornerRadius="8dp"
-            app:cardElevation="4dp">
+            app:cardElevation="4dp"
+            tools:ignore="TextSizeCheck">
 
             <!-- Contenido del rectángulo aquí -->
 
@@ -55,7 +58,7 @@
                 android:id="@+id/CardView1"
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="60dp"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="4dp">
@@ -66,30 +69,32 @@
                     android:id="@+id/imageView3"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
-                    android:src="@drawable/profilemen" />
+                    android:src="@drawable/profilemen"
+                    android:contentDescription="@string/CVB" />
 
                 <TextView
                     android:id="@+id/textView23"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="80dp"
+                    android:layout_marginStart="80dp"
                     android:layout_marginTop="5dp"
-                    android:text="Dirección del spot" />
+                    android:text="@string/PO" />
 
                 <TextView
                     android:id="@+id/textView27"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="80dp"
+                    android:layout_marginStart="80dp"
                     android:layout_marginTop="25dp"
-                    android:text="Horario: 14:40 - 15:00" />
+                    android:text="@string/horario_14_40_15_00" />
+
                 <TextView
                     android:id="@+id/textView29"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="80dp"
+                    android:layout_marginStart="80dp"
                     android:layout_marginTop="45dp"
-                    android:text="Fecha: 20/20/2023" />
+                    android:text="@string/fecha_20_20_2023" />
 
 
             </androidx.cardview.widget.CardView>
@@ -98,42 +103,44 @@
                 android:id="@+id/btn_llego"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="130dp"
                 android:backgroundTint="#609E43"
                 android:shadowColor="#FFFFFF"
-                android:text="Llegó"
-                android:textColor="#FFFFFF" />
+                android:text="@string/lleg"
+                android:textColor="#212121" />
+
             <Button
                 android:id="@+id/btn_salio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="135dp"
+                android:layout_marginStart="135dp"
                 android:layout_marginTop="130dp"
                 android:backgroundTint="#000000"
                 android:shadowColor="#FFFFFF"
-                android:text="Salió"
+                android:text="@string/sali"
                 android:textColor="#FFFFFF" />
 
             <Button
                 android:id="@+id/btn_cancelar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="240dp"
+                android:layout_marginStart="240dp"
                 android:layout_marginTop="130dp"
                 android:backgroundTint="#C33838"
                 android:shadowColor="#FFFFFF"
-                android:text="Cancelar"
+                android:text="@string/cancelar"
                 android:textColor="#FFFFFF" />
+
             <TextView
                 android:id="@+id/textView11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="90dp"
+                android:layout_marginStart="90dp"
                 android:layout_marginTop="10dp"
-                android:text="MIS TICKETS"
+                android:text="@string/mis_tickets"
                 android:textColor="#000000"
-                android:textSize="30dp" />
+                android:textSize="30sp" />
 
 
         </androidx.cardview.widget.CardView>
@@ -151,7 +158,8 @@
         app:layout_constraintHorizontal_bias="0.899"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.962" />
+        app:layout_constraintVertical_bias="0.962"
+        android:contentDescription="@string/U" />
 
     <ImageView
         android:id="@+id/btn_MisSpots"
@@ -163,5 +171,6 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.962" />
+        app:layout_constraintVertical_bias="0.962"
+        android:contentDescription="@string/BM" />
 </androidx.constraintlayout.widget.ConstraintLayout>
