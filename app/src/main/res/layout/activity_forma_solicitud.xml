@@ -69,7 +69,7 @@
                 android:id="@+id/textView11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:text="SOLICITUD"
                 android:textColor="#000000"
@@ -105,7 +105,7 @@
                 android:text="Notas:" />
 
             <TextView
-                android:id="@+id/textView13"
+                android:id="@+id/CAR_PRICE"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="60dp"
@@ -113,7 +113,7 @@
                 android:text="$CP" />
 
             <TextView
-                android:id="@+id/textView14"
+                android:id="@+id/BIKEPRICE"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="60dp"
@@ -170,7 +170,7 @@
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <EditText
-                android:id="@+id/editTextText6"
+                android:id="@+id/Nota"
                 android:layout_width="240dp"
                 android:layout_height="100dp"
                 android:layout_marginLeft="60dp"
@@ -180,6 +180,16 @@
                 android:hint=""
                 android:inputType="textMultiLine"
                 tools:ignore="SpeakableTextPresentCheck" />
+
+            <Button
+                android:id="@+id/btn_verUrl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="190dp"
+                android:text="Ver en Mapa"
+                android:backgroundTint="#742D2D"
+                android:textColor="#FFFFFF"/>
 
         </androidx.cardview.widget.CardView>
 

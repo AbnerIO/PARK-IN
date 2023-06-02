@@ -16,13 +16,13 @@ class PagoSolicitud : ComponentActivity() {
             val intent = Intent(this, ADondeVamos::class.java)
             startActivity(intent)
         }
-        val btnProfile= findViewById<ImageView>(R.id.btn_Profile)
+        val btnProfile = findViewById<ImageView>(R.id.btn_Profile)
         btnProfile.setOnClickListener {
             val intent = Intent(this, MiPerfilCliente::class.java)
             startActivity(intent)
         }
 
-        val btnTicketsUsuario= findViewById<ImageView>(R.id.btn_ticketsUsuario)
+        val btnTicketsUsuario = findViewById<ImageView>(R.id.btn_ticketsUsuario)
         btnTicketsUsuario.setOnClickListener {
             val intent = Intent(this, TicketsCliente::class.java)
             startActivity(intent)
@@ -34,6 +34,8 @@ class PagoSolicitud : ComponentActivity() {
             val intent = Intent(this, ADondeVamos::class.java)
             startActivity(intent)
         }
+
+
 
     }
 

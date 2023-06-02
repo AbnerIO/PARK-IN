@@ -58,7 +58,7 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/editTextText2"
+                android:id="@+id/estado"
                 android:layout_width="290dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="30dp"
@@ -71,7 +71,7 @@
                 android:paddingLeft="10dp" />
 
             <EditText
-                android:id="@+id/editTextText4"
+                android:id="@+id/ciudad"
                 android:layout_width="290dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="30dp"
@@ -84,7 +84,7 @@
                 android:paddingLeft="10dp" />
 
             <EditText
-                android:id="@+id/editTextText5"
+                android:id="@+id/colonia"
                 android:layout_width="290dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="30dp"

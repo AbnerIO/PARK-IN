@@ -49,9 +49,8 @@ class MiPerfilPropietario : ComponentActivity() {
                 val value = bundle.get(key)
                 owner_id = value
             }
-                mostrarAlerta(owner_id.toString())
+
             if (owner_id != null) {
-                val cardContainer = findViewById<LinearLayout>(R.id.cardContainer)
                 // peticion
                 val client = OkHttpClient()
                 // Enlace y método
@@ -92,12 +91,12 @@ class MiPerfilPropietario : ComponentActivity() {
                                 textTipo.text = type
                                 textSpots.text = "Spots:"
                                 textTelefono.text = phone
-                                mostrarAlerta("si")
+
 
                             } else {
                                 val json = JSONObject(responseData)
                                 // La solicitud no fue exitosa (código de respuesta fuera del rango 200-299)
-                                mostrarAlerta(json.toString())
+
 
                             }
                         }

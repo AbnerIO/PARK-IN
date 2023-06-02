@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">PARKIN</string>
+    <string name="park_in">PARK-IN</string>
+    <string name="todo">TODO</string>
+    <string name="n_mero_de_tarjeta">Número de tarjeta</string>
+    <string name="ingrese_el_n_mero_de_tarjeta">Ingrese el número de tarjeta</string>
+    <string name="fecha_de_vencimiento">Fecha de vencimiento</string>
+    <string name="mm_aa">(MM/AA)</string>
+    <string name="cvv">CVV</string>
+    <string name="cvvv">CVV</string>
+    <string name="nombre_del_titular">Nombre del titular</string>
+    <string name="nombre_completo">Nombre Completo</string>
+    <string name="pagar">Pagar</string>
+    <string name="todoo">TODO</string>
+    <string name="todooo">TODO</string>
+    <string name="todos">TODO</string>
 </resources>

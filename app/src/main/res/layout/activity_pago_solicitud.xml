@@ -5,20 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".PagoSolicitud">
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="152dp"
         android:layout_height="54dp"
-        android:text="PARK-IN"
+        android:text="@string/park_in"
         android:textColor="#000000"
-        android:textSize="38dp"
+        android:textSize="38sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.044" />
+        app:layout_constraintVertical_bias="0.044"
+        tools:ignore="TextSizeCheck,TextSizeCheck,VisualLintOverlap" />
 
 
     <ImageView
@@ -31,7 +33,8 @@
         app:layout_constraintHorizontal_bias="0.59"
         app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.044" />
+        app:layout_constraintVertical_bias="0.044"
+        android:contentDescription="@string/todo" />
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
@@ -50,10 +53,11 @@
             <TextView
                 android:layout_width="170dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
                 android:layout_marginTop="30dp"
-                android:layout_marginLeft="30dp"
-                android:text="Número de tarjeta"
-                android:textSize="20sp" />
+                android:text="@string/n_mero_de_tarjeta"
+                android:textSize="20sp"
+                tools:ignore="TextSizeCheck" />
 
             <EditText
                 android:id="@+id/editCardNumber"
@@ -61,64 +65,73 @@
                 android:layout_height="50dp"
                 android:inputType="number"
                 android:layout_marginTop="65dp"
-                android:layout_marginLeft="30dp"
+                android:layout_marginStart="30dp"
                 android:background="@drawable/input_background"
-                android:hint="   Ingrese el número de tarjeta" />
+                android:hint="@string/ingrese_el_n_mero_de_tarjeta"
+                android:autofillHints="" />
 
             <TextView
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
                 android:layout_marginTop="125dp"
-                android:layout_marginLeft="30dp"
+                android:text="@string/fecha_de_vencimiento"
                 android:textSize="20sp"
-                android:text="Fecha de vencimiento" />
+                tools:ignore="TextSizeCheck" />
 
             <EditText
                 android:id="@+id/editExpirationDate"
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/input_background"
+                android:layout_marginStart="30dp"
                 android:layout_marginTop="180dp"
-                android:layout_marginLeft="30dp"
-                android:hint="  (MM/AA)"
+                android:background="@drawable/input_background"
+                android:hint="@string/mm_aa"
                 android:inputType="number"
-                android:minHeight="48dp" />
+                android:minHeight="48dp"
+                android:autofillHints=""
+                tools:ignore="TextFields" />
 
             <TextView
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="200dp"
                 android:layout_marginTop="130dp"
-                android:layout_marginLeft="200dp"
-                android:text="CVV"
-                android:textSize="20sp"/>
+                android:text="@string/cvv"
+                android:textSize="20sp"
+                tools:ignore="TextSizeCheck" />
 
             <EditText
                 android:id="@+id/editCvv"
                 android:layout_width="110dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="200dp"
                 android:layout_marginTop="180dp"
-                android:layout_marginLeft="200dp"
+                android:autofillHints=""
                 android:background="@drawable/input_background"
-                android:hint="  CVV"
+                android:hint="@string/cvvv"
                 android:inputType="number"
-                android:minHeight="48dp" />
+                android:minHeight="48dp"
+                tools:ignore="DuplicateSpeakableTextCheck" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="240dp"
-                android:layout_marginLeft="30dp"
-                android:text="Nombre del titular"
+                android:layout_marginStart="30dp"
+                android:text="@string/nombre_del_titular"
                 android:textSize="20sp"/>
             <EditText
                 android:id="@+id/editTitular"
                 android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="280dp"
-                android:layout_marginLeft="30dp"
+                android:layout_marginStart="30dp"
                 android:background="@drawable/input_background"
-                android:hint="  Nombre Completo"
+                android:hint="@string/nombre_completo"
                 android:inputType="text"
-                android:minHeight="48dp" />
+                android:minHeight="48dp"
+                android:autofillHints=""
+                tools:ignore="VisualLintOverlap" />
             <Button
                 android:id="@+id/btn_pagoSolicitud"
                 android:layout_width="287dp"
@@ -127,16 +140,18 @@
                 android:layout_marginTop="480dp"
                 android:backgroundTint="#000000"
                 android:shadowColor="#593D3D"
-                android:text="Pagar"
+                android:text="@string/pagar"
                 android:textColor="#FFFFFF"
-                android:textSize="19dp" />
+                android:textSize="19sp"
+                tools:ignore="VisualLintOverlap" />
 
             <ImageView
                 android:id="@+id/imageView9"
                 android:layout_width="300dp"
-                android:layout_height="220dp"
+                android:layout_height="199dp"
                 android:layout_marginStart="30dp"
-                android:layout_marginTop="300dp"
+                android:layout_marginTop="320dp"
+                android:contentDescription="@string/todoo"
                 android:src="@drawable/tarjetas" />
         </androidx.cardview.widget.CardView>
 
@@ -153,7 +168,8 @@
         app:layout_constraintHorizontal_bias="0.899"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.962" />
+        app:layout_constraintVertical_bias="0.962"
+        android:contentDescription="@string/todooo" />
 
     <ImageView
         android:id="@+id/btn_ADondeVamos"
@@ -165,5 +181,6 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.962" />
+        app:layout_constraintVertical_bias="0.962"
+        android:contentDescription="@string/todos" />
 </androidx.constraintlayout.widget.ConstraintLayout>
