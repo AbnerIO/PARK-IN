@@ -22,7 +22,7 @@ class MiPerfilPropietario : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mi_perfil_propietario)
-        val URL = "http://192.168.0.11:5000"
+        val URL = "https://scientific-machine-production.up.railway.app"
         // Funciones base
         val btnTicketsPropietarios = findViewById<ImageView>(R.id.btn_ticketsPropietario)
         btnTicketsPropietarios.setOnClickListener {

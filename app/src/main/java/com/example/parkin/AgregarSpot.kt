@@ -1,13 +1,27 @@
 package com.example.parkin
 
 import android.app.AlertDialog
+import android.content.ContentValues.TAG
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.net.Uri
 import android.os.Bundle
+import android.os.Environment
+import android.provider.MediaStore
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.ComponentActivity
+import androidx.camera.core.CameraSelector
+import androidx.camera.core.ImageCapture
+import androidx.camera.core.ImageCaptureException
+import androidx.camera.core.Preview
+import androidx.camera.lifecycle.ProcessCameraProvider
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
+import androidx.core.content.FileProvider
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -16,7 +30,17 @@ import okhttp3.FormBody
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import org.json.JSONObject
+import java.io.File
 import java.io.IOException
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
+import android.Manifest
+import android.graphics.Bitmap
+import android.util.Base64
+import java.io.ByteArrayOutputStream
+import java.io.FileOutputStream
+
 
 
 class AgregarSpot : ComponentActivity() {
@@ -24,7 +48,7 @@ class AgregarSpot : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_agregar_spot)
 
-        val URL = "http://192.168.0.11:5000"
+        val URL = "https://scientific-machine-production.up.railway.app"
         // Funciones base
         val btnTicketsPropietarios = findViewById<ImageView>(R.id.btn_ticketsPropietario)
         btnTicketsPropietarios.setOnClickListener {
@@ -40,6 +64,16 @@ class AgregarSpot : ComponentActivity() {
         btnPerfilPropietario.setOnClickListener {
             val intent = Intent(this, MiPerfilPropietario::class.java)
             startActivity(intent)
+        }
+
+        val CAMERA_REQUEST_CODE = 123
+        val btnFoto = findViewById<Button>(R.id.btn_SubirComprobante)
+        btnFoto.setOnClickListener{
+            if (checkCameraPermission()) {
+                openCamera()
+            } else {
+                requestCameraPermission()
+            }
         }
 
 
@@ -125,4 +159,59 @@ class AgregarSpot : ComponentActivity() {
         })
         alertDialog.show()
     }
+
+    private fun checkCameraPermission(): Boolean {
+        return ContextCompat.checkSelfPermission(
+            this,
+            Manifest.permission.CAMERA
+        ) == PackageManager.PERMISSION_GRANTED
+    }
+
+    private fun requestCameraPermission() {
+        ActivityCompat.requestPermissions(
+            this,
+            arrayOf(Manifest.permission.CAMERA),
+            123
+        )
+    }
+
+    private fun openCamera() {
+        val cameraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+        startActivityForResult(cameraIntent, 123)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == 123 && resultCode == RESULT_OK) {
+            val imageBitmap = data?.extras?.get("data") as Bitmap
+
+            // Crear un archivo en la carpeta DCIM
+            val displayName = "nombre_imagen.jpg"
+            val imagePath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM).toString() + File.separator + displayName
+            val imageFile = File(imagePath)
+
+            try {
+                // Escribir el contenido de la imagen en el archivo
+                val outputStream = FileOutputStream(imageFile)
+                imageBitmap.compress(Bitmap.CompressFormat.JPEG, 100, outputStream)
+                outputStream.flush()
+                outputStream.close()
+
+                // Actualizar la galería con la nueva imagen
+                val mediaScanIntent = Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE)
+                val contentUri = Uri.fromFile(imageFile)
+                mediaScanIntent.data = contentUri
+                sendBroadcast(mediaScanIntent)
+
+                // Mostrar mensaje de éxito
+                Toast.makeText(this, "Imagen guardada correctamente", Toast.LENGTH_SHORT).show()
+            } catch (e: IOException) {
+                e.printStackTrace()
+                // Mostrar mensaje de error
+                Toast.makeText(this, "Error al guardar la imagen", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
 }

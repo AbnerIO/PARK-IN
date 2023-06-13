@@ -27,7 +27,7 @@ class Register : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-        val URL = "http://192.168.0.11:5000"
+        val URL = "https://scientific-machine-production.up.railway.app"
         val intent = Intent(this, MainActivity::class.java)
 
         // Referencias a botones

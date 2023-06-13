@@ -22,7 +22,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome)
 
-        val URL = "http://192.168.0.11:5000"
+        val URL = "https://scientific-machine-production.up.railway.app"
         println(URL)
         val btnRegistrarse = findViewById<Button>(R.id.btn_registrarse)
         val btnLogin = findViewById<Button>(R.id.btn_login)

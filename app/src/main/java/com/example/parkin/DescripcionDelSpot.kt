@@ -41,7 +41,7 @@ class DescripcionDelSpot : ComponentActivity() {
             startActivity(intent)
         }
 
-        val URL = "http://192.168.0.11:5000"
+        val URL = "https://scientific-machine-production.up.railway.app"
 
         // Acciones
         val extras = intent.extras
@@ -52,7 +52,7 @@ class DescripcionDelSpot : ComponentActivity() {
             val client = OkHttpClient()
             // Enlace y método
             val request = Request.Builder()
-                .url("$URL/spot/$spot_id")
+                .url("$URL/spots/$spot_id")
                 .get()
                 .build()
             // Corrutinado (ejecución)
@@ -86,9 +86,8 @@ class DescripcionDelSpot : ComponentActivity() {
                             textPrecioBicis.text = bike_price
                             textDireccion.text = "$number $street $neighborhood"
                         } else {
-                            val json = JSONObject(responseData)
-                            // La solicitud no fue exitosa (código de respuesta fuera del rango 200-299)
-                            mostrarAlerta(json.toString())
+
+                            mostrarAlerta(responseData.toString())
 
                         }
                     }

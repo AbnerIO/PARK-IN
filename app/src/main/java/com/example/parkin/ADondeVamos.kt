@@ -42,7 +42,7 @@ class ADondeVamos : ComponentActivity() {
         }
 
 
-        val URL = "http://192.168.0.11:5000"
+        val URL = "https://scientific-machine-production.up.railway.app"
 
         val btnBuscar = findViewById<Button>(R.id.btn_buscar)
         btnBuscar.setOnClickListener {

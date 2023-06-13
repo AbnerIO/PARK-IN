@@ -27,7 +27,7 @@ class VistaOpciones : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_vista_opciones)
-        val URL = "http://192.168.0.11:5000"
+        val URL = "https://scientific-machine-production.up.railway.app"
         val intentPagoSolicitud = Intent(this, FormaSolicitud::class.java)
         //Botones principales
         val btnADondeVamos = findViewById<ImageView>(R.id.btn_ADondeVamos)

@@ -33,7 +33,7 @@ class MisSpots : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mis_spots)
         val owner_id = 1
-        val URL = "http://192.168.0.11:5000"
+        val URL = "https://scientific-machine-production.up.railway.app"
         val intentDescripcionDelSpot = Intent(this, DescripcionDelSpot::class.java)
         // Funciones base
         val btnTicketsPropietarios = findViewById<ImageView>(R.id.btn_ticketsPropietario)
