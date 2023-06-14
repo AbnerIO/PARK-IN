@@ -75,11 +75,11 @@ class MisSpots : ComponentActivity() {
                 val responseData = response.body?.string()
                 withContext(Dispatchers.Main) {
                     if (response.isSuccessful) {
-                        val json = JSONObject(responseData)
+                        val spotsArray = JSONArray(responseData)
                         // La solicitud fue exitosa (código de respuesta en el rango 200-299)
 
                         // Obtener el array "spots" del objeto JSON
-                        val spotsArray = json.getJSONArray("spots")
+
 
                         // Recorrer el array de spots
                         for (i in 0 until spotsArray.length()) {

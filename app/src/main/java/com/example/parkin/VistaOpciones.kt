@@ -58,7 +58,7 @@ class VistaOpciones : ComponentActivity() {
                 val client = OkHttpClient()
                 // Enlace y método
                 val request = Request.Builder()
-                    .url("$URL/spots/get/$estado/$ciudad/$colonia")
+                    .url("https://scientific-machine-production.up.railway.app/spots/get/$estado/$ciudad/$colonia")
                     .get()
                     .build()
                 // Corrutinado (ejecución)
@@ -216,9 +216,9 @@ class VistaOpciones : ComponentActivity() {
                                     }
                                 }
                             } else {
-                                val json = JSONObject(responseData)
+
                                 // La solicitud no fue exitosa (código de respuesta fuera del rango 200-299)
-                                mostrarAlerta(json.toString())
+                                mostrarAlerta(responseData.toString())
 
                             }
                         }

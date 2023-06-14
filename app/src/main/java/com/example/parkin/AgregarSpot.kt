@@ -38,6 +38,10 @@ import java.util.Locale
 import android.Manifest
 import android.graphics.Bitmap
 import android.util.Base64
+import okhttp3.MediaType.Companion.toMediaType
+import okhttp3.MultipartBody
+import okhttp3.RequestBody.Companion.asRequestBody
+import okhttp3.RequestBody.Companion.toRequestBody
 import java.io.ByteArrayOutputStream
 import java.io.FileOutputStream
 
@@ -193,6 +197,7 @@ class AgregarSpot : ComponentActivity() {
 
             try {
                 // Escribir el contenido de la imagen en el archivo
+                val stream = ByteArrayOutputStream()
                 val outputStream = FileOutputStream(imageFile)
                 imageBitmap.compress(Bitmap.CompressFormat.JPEG, 100, outputStream)
                 outputStream.flush()
@@ -203,6 +208,46 @@ class AgregarSpot : ComponentActivity() {
                 val contentUri = Uri.fromFile(imageFile)
                 mediaScanIntent.data = contentUri
                 sendBroadcast(mediaScanIntent)
+                val byteArray = stream.toByteArray()
+                val cliente = OkHttpClient()
+                val URL = "https://scientific-machine-production.up.railway.app"
+//
+                CoroutineScope(Dispatchers.IO).launch {
+                    val file = File.createTempFile("imagen", ".jpg")
+                    val fileOutputStream = FileOutputStream(file)
+                    fileOutputStream.write(byteArray)
+                    fileOutputStream.flush()
+                    fileOutputStream.close()
+                    val requestBody = MultipartBody.Builder()
+                        .setType(MultipartBody.FORM)
+                        .addFormDataPart("imagen", "imagen.jpg", file.asRequestBody("image/jpeg".toMediaType()))
+                        .build()
+
+                    val request = Request.Builder()
+                        .url("$URL/foto")
+                        .post(requestBody)
+                        .build()
+
+                    try {
+                        val response = withContext(Dispatchers.IO) {
+                            cliente.newCall(request).execute()
+                        }
+
+                        val responseData = response.body?.string()
+
+                        if (response.isSuccessful) {
+                            println("PUTAAAAAAA")
+                            println(responseData)
+                        } else {
+                            println("PUTAAAAAAA")
+                            println(responseData)
+                        }
+                    } catch (e: Exception) {
+                        print("PUTOOOO")
+                        println(e.message)
+                        // Manejar excepciones
+                    }
+                }
 
                 // Mostrar mensaje de éxito
                 Toast.makeText(this, "Imagen guardada correctamente", Toast.LENGTH_SHORT).show()
