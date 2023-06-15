@@ -89,7 +89,7 @@ class FormaSolicitud : ComponentActivity() {
                     }
 
                     override fun onNothingSelected(parent: AdapterView<*>?) {
-                        // Acciones cuando no se selecciona ningún elemento
+                       carros = "1"
                     }
                 }
                 //spinner bicicletas
@@ -111,7 +111,7 @@ class FormaSolicitud : ComponentActivity() {
                         }
 
                         override fun onNothingSelected(parent: AdapterView<*>?) {
-                            // Acciones cuando no se selecciona ningún elemento
+                            bicis = "1"
                         }
                     }
 
@@ -128,8 +128,8 @@ class FormaSolicitud : ComponentActivity() {
                     extras.putString("id", id)
                     extras.putString("entrada", entrada)
                     extras.putString("salida", salida)
-                    extras.putString("bike_spaces", bicis)
-                    extras.putString("car_spaces", carros)
+                    extras.putString("bicis", bicis)
+                    extras.putString("carros", carros)
                     extras.putString("nota", nota)
                     extras.putString("precio", precio.toString())
 

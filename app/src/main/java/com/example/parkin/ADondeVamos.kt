@@ -40,7 +40,14 @@ class ADondeVamos : ComponentActivity() {
             val intent = Intent(this, TicketsCliente::class.java)
             startActivity(intent)
         }
-
+        val extras = intent.extras
+        if (extras != null) {
+            val message =
+                extras.getString("message") // Obtiene el valor del extra utilizando la clave
+            if (message != null) {
+                mostrarAlerta(message)
+            }
+        }
 
         val URL = "https://scientific-machine-production.up.railway.app"
 
