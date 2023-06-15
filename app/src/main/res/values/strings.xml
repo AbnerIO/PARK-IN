@@ -137,4 +137,5 @@
     <string name="ASQ">Contraseña:</string>
     <string name="no_tienes_cuenta">¿No tienes cuenta?</string>
     <string name="title_activity_camera">Camera</string>
+    <string name="tickets">Tickets</string>
 </resources>

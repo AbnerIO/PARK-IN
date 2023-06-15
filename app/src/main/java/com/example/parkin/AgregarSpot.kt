@@ -236,14 +236,14 @@ class AgregarSpot : ComponentActivity() {
                         val responseData = response.body?.string()
 
                         if (response.isSuccessful) {
-                            println("PUTAAAAAAA")
+
                             println(responseData)
                         } else {
-                            println("PUTAAAAAAA")
+
                             println(responseData)
                         }
                     } catch (e: Exception) {
-                        print("PUTOOOO")
+
                         println(e.message)
                         // Manejar excepciones
                     }

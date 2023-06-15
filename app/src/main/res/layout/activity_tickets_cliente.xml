@@ -5,20 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TicketsCliente">
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="152dp"
         android:layout_height="54dp"
-        android:text="PARK-IN"
+        android:text="@string/H"
         android:textColor="#000000"
-        android:textSize="38dp"
+        android:textSize="38sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.044" />
+        app:layout_constraintVertical_bias="0.044"
+        tools:ignore="TextSizeCheck,VisualLintOverlap" />
 
 
     <ImageView
@@ -31,7 +33,9 @@
         app:layout_constraintHorizontal_bias="0.59"
         app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.044" />
+        app:layout_constraintVertical_bias="0.044"
+        android:contentDescription="@string/G" />
+
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
@@ -42,95 +46,43 @@
             android:id="@+id/CardView"
             android:layout_width="346dp"
             android:layout_height="547dp"
-            app:cardBackgroundColor="#D9D9D9"
+            app:cardBackgroundColor="#C1D9D9"
             app:cardCornerRadius="8dp"
             app:cardElevation="4dp">
 
-            <!-- Contenido del rectángulo aquí -->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:layout_marginTop="50dp"
+                tools:ignore="SpeakableTextPresentCheck">
 
-            <!-- Tarjeta 1 -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/CardView1"
-                android:layout_width="320dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="80dp"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="4dp">
-
-                <!-- Contenido de la tarjeta 1 -->
-
-                <ImageView
-                    android:id="@+id/imageView3"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:src="@drawable/linehouse" />
-
-                <TextView
-                    android:id="@+id/textView6"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:id="@+id/cardContainer"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="80dp"
-                    android:text="Residencial Anahuac 231" />
-                <TextView
-                    android:id="@+id/textView7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="80dp"
-                    android:layout_marginTop="20dp"
-                    android:text="Tiempo restante: 1hr" />
-                <TextView
-                    android:id="@+id/textView8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="80dp"
-                    android:layout_marginTop="40dp"
-                    android:text="Tiempo excedido: 0hrs" />
+                    android:orientation="vertical">
 
-                <Button
-                    android:id="@+id/button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="220dp"
-                    android:layout_marginTop="10dp"
-                    android:backgroundTint="#C33838"
-                    android:shadowColor="#FFFFFF"
-                    android:text="Cancelar"
-                    android:textColor="#FFFFFF" />
+                    <!-- No es necesario agregar ninguna tarjeta estática aquí -->
 
-            </androidx.cardview.widget.CardView>
+                </LinearLayout>
 
+            </ScrollView>
             <TextView
                 android:id="@+id/textView11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="90dp"
+                android:layout_marginStart="120dp"
                 android:layout_marginTop="10dp"
-                android:text="MIS TICKETS"
+                android:text="@string/tickets"
                 android:textColor="#000000"
-                android:textSize="30dp" />
-            <TextView
-                android:id="@+id/textView12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="150dp"
-                android:layout_marginTop="55dp"
-                android:text="Actuales"
-                 />
-            <TextView
-                android:id="@+id/textView13"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="150dp"
-                android:layout_marginTop="160dp"
-                android:text="Pasados"
-                />
+                android:textSize="30sp" />
 
 
         </androidx.cardview.widget.CardView>
 
 
     </RelativeLayout>
+
     <ImageView
         android:id="@+id/btn_ticketsUsuario"
         android:layout_width="wrap_content"
@@ -141,7 +93,8 @@
         app:layout_constraintHorizontal_bias="0.899"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.962" />
+        app:layout_constraintVertical_bias="0.962"
+        android:contentDescription="@string/TJ" />
 
     <ImageView
         android:id="@+id/btn_ADondeVamos"
@@ -153,5 +106,6 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.962" />
+        app:layout_constraintVertical_bias="0.962"
+        android:contentDescription="@string/F" />
 </androidx.constraintlayout.widget.ConstraintLayout>
