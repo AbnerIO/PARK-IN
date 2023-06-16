@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TicketsPropietarios">
+    tools:context=".TicketsCliente">
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="152dp"
         android:layout_height="54dp"
-        android:text="@string/AS"
+        android:text="@string/H"
         android:textColor="#000000"
         android:textSize="38sp"
         android:textStyle="bold"
@@ -34,7 +34,7 @@
         app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.044"
-        android:contentDescription="@string/XC" />
+        android:contentDescription="@string/G" />
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
@@ -48,97 +48,32 @@
             android:layout_height="547dp"
             app:cardBackgroundColor="#C1D9D9"
             app:cardCornerRadius="8dp"
-            app:cardElevation="4dp"
-            tools:ignore="TextSizeCheck">
+            app:cardElevation="4dp">
 
-            <!-- Contenido del rectángulo aquí -->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:layout_marginTop="50dp"
+                tools:ignore="SpeakableTextPresentCheck">
 
-            <!-- Tarjeta 1 -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/CardView1"
-                android:layout_width="320dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="60dp"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="4dp">
-
-                <!-- Contenido de la tarjeta 1 -->
-
-                <ImageView
-                    android:id="@+id/imageView3"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:src="@drawable/profilemen"
-                    android:contentDescription="@string/CVB" />
-
-                <TextView
-                    android:id="@+id/textView23"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:id="@+id/cardContainer"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="80dp"
-                    android:layout_marginTop="5dp"
-                    android:text="@string/PO" />
+                    android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/textView27"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="80dp"
-                    android:layout_marginTop="25dp"
-                    android:text="@string/horario_14_40_15_00" />
+                    <!-- No es necesario agregar ninguna tarjeta estática aquí -->
 
-                <TextView
-                    android:id="@+id/textView29"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="80dp"
-                    android:layout_marginTop="45dp"
-                    android:text="@string/fecha_20_20_2023" />
+                </LinearLayout>
 
-
-            </androidx.cardview.widget.CardView>
-
-            <Button
-                android:id="@+id/btn_llego"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="130dp"
-                android:backgroundTint="#609E43"
-                android:shadowColor="#FFFFFF"
-                android:text="@string/lleg"
-                android:textColor="#212121" />
-
-            <Button
-                android:id="@+id/btn_salio"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="135dp"
-                android:layout_marginTop="130dp"
-                android:backgroundTint="#000000"
-                android:shadowColor="#FFFFFF"
-                android:text="@string/sali"
-                android:textColor="#FFFFFF" />
-
-            <Button
-                android:id="@+id/btn_cancelar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="240dp"
-                android:layout_marginTop="130dp"
-                android:backgroundTint="#C33838"
-                android:shadowColor="#FFFFFF"
-                android:text="@string/cancelar"
-                android:textColor="#FFFFFF" />
-
+            </ScrollView>
             <TextView
                 android:id="@+id/textView11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="90dp"
+                android:layout_marginStart="120dp"
                 android:layout_marginTop="10dp"
-                android:text="@string/mis_tickets"
+                android:text="@string/tickets"
                 android:textColor="#000000"
                 android:textSize="30sp" />
 
@@ -159,7 +94,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.962"
-        android:contentDescription="@string/U" />
+        android:contentDescription="@string/TJ" />
 
     <ImageView
         android:id="@+id/btn_MisSpots"
@@ -172,5 +107,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.962"
-        android:contentDescription="@string/BM" />
+        android:contentDescription="@string/F" />
 </androidx.constraintlayout.widget.ConstraintLayout>

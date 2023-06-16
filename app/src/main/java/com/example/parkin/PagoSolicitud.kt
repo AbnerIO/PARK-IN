@@ -33,7 +33,7 @@ class PagoSolicitud : ComponentActivity() {
         setContentView(R.layout.activity_pago_solicitud)
         var user_id=1
         //Botones principales
-        val URL = "http://192.168.1.70:5000"
+        val URL = "https://scientific-machine-production.up.railway.app"
         val btnADondeVamos = findViewById<ImageView>(R.id.btn_ADondeVamos)
         btnADondeVamos.setOnClickListener {
             val intent = Intent(this, ADondeVamos::class.java)

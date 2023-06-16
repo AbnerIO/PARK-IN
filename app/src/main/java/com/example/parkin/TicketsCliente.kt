@@ -47,7 +47,6 @@ class TicketsCliente : ComponentActivity() {
         val extras = intent.extras
         if (extras == null) {
 
-
             // peticion
             val client = OkHttpClient()
             // Enlace y método
