@@ -64,7 +64,8 @@ class FormaSolicitud : ComponentActivity() {
                 btn_verMapa.setOnClickListener{
                     val intentURL = Intent(Intent.ACTION_VIEW)
                     intentURL.data = Uri.parse(map_url)
-                    startActivity(intentURL)
+                    val intentMapa = Intent(this, Mapa::class.java)
+                    startActivity(intentMapa)
                 }
                 val car_price_view = findViewById<TextView>(R.id.CAR_PRICE)
                 car_price_view.text = "$$car_price"

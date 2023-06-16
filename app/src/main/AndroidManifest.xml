@@ -7,7 +7,9 @@
 
     <uses-feature android:name="android.hardware.camera" />
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"
+        tools:ignore="ScopedStorage" />
 
     <application
         android:allowBackup="true"
@@ -20,7 +22,13 @@
         android:theme="@style/Theme.PARKIN"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBJm88XocWtWHKVpx_ftthCUFvkZqX-B9E" />
+        <activity
+            android:name=".Mapa"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat"/>
         <activity
             android:name=".AgregarSpot"
             android:exported="false" />
@@ -61,7 +69,6 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/Theme.PARKIN">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
