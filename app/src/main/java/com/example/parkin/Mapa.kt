@@ -10,12 +10,16 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 
+
 class Mapa : AppCompatActivity(), OnMapReadyCallback {
     private lateinit var map: GoogleMap
+    var address = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mapa)
+        address = intent.getStringExtra("address").toString()
+        println("Adreesasdasdasdasd : " + address)
         createFragment()
     }
 
@@ -28,11 +32,8 @@ class Mapa : AppCompatActivity(), OnMapReadyCallback {
 
     override fun onMapReady(googleMap: GoogleMap) {
         map = googleMap
-        map = googleMap
-        val address = "Teotihuacan 239, Residencial Anáhuac, San Nicolás de los Garza, Nuevo León, 66422, México"
         val geocoder = Geocoder(this)
-        val locationList = geocoder.getFromLocationName(address,1)
-
+        val locationList = geocoder.getFromLocationName(address.toString(),1)
         if (locationList!!.isNotEmpty()) {
             val location = locationList!![0]
             val coordinates = LatLng(location.latitude, location.longitude)

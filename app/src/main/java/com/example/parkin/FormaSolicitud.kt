@@ -65,6 +65,8 @@ class FormaSolicitud : ComponentActivity() {
                     val intentURL = Intent(Intent.ACTION_VIEW)
                     intentURL.data = Uri.parse(map_url)
                     val intentMapa = Intent(this, Mapa::class.java)
+                    intentMapa.putExtra("address", map_url.replace("https://www.google.com/maps/search/", ""))
+                    println("Maopaaaaaaaa"+ map_url.replace("https://www.google.com/maps/search/", ""))
                     startActivity(intentMapa)
                 }
                 val car_price_view = findViewById<TextView>(R.id.CAR_PRICE)
